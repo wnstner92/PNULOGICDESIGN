@@ -1,0 +1,70 @@
+StimulianSaveFile
+LanguageType Verilog
+tbModuleName week04third_tb
+ModuleName week04third
+TimeUnit ns
+TotalTime 10000
+GridInterval 100
+Parameters
+End
+Port
+-1 ! 1 Binary CLK singlebit in 0 0 PortEnd 0
+-1 ' 1 Binary RST singlebit in 0 0 PortEnd 0
+-1 " 1 Binary Din singlebit in 0 0 PortEnd 0
+0 # 1 Binary Q0 singlebit out 0 0 PortEnd 0
+0 $ 1 Binary Q1 singlebit out 0 0 PortEnd 0
+0 % 1 Binary Q2 singlebit out 0 0 PortEnd 0
+0 & 1 Binary Q3 singlebit out 0 0 PortEnd 0
+End
+pixelTimeRatio 5
+HorzZoomOutScale 80
+WavesHorzScrollBarMax 524272
+WavesHorzScrollBarPosition 37434
+WavesHorzScrollBarEnabled -1
+DefaultVertInterval 32
+UnScaledDefaultVertInterval 16
+UnScaledDefaultVertSignalHeight 10
+WavesVertScrollBarMax 100
+WavesVertScrollBarPosition 0
+WavesVertScrollBarEnabled 0
+Vars
+s!
+t0
+0 200 50 1
+100 200 50 0
+s"
+t0
+0 500 2 0
+400 900 2 1
+1500 0 1 0
+s#
+t0
+0 0 1 0
+s$
+t0
+0 0 1 0
+s%
+t0
+0 0 1 0
+s&
+t0
+0 0 1 0
+s'
+t0
+0 400 2 0
+200 0 1 1
+End
+Cursors
+1500
+End
+ActiveCursorIndex 0
+versionCode
+20070511
+psrFileName
+D:\_analyze\week04third.psr
+systemCExportSimulationTime
+10000
+systemCExportSimulationTimeUnit
+10000
+systemCProbes
+End

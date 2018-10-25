@@ -1,0 +1,61 @@
+StimulianSaveFile
+LanguageType Verilog
+tbModuleName week0501_tb
+ModuleName week0501
+TimeUnit ns
+TotalTime 10000
+GridInterval 100
+Parameters
+End
+Port
+-1 ) 1 Binary Clk singlebit in 0 0 PortEnd 0
+-1 * 1 Binary rst singlebit in 0 0 PortEnd 0
+0 ! 0 Binary CNT10 multibit out 3 0 Children % [3] & [2] ' [1] ( [0] ChildrenEnd PortEnd 0
+End
+pixelTimeRatio 5
+HorzZoomOutScale 80
+WavesHorzScrollBarMax 524272
+WavesHorzScrollBarPosition 0
+WavesHorzScrollBarEnabled -1
+DefaultVertInterval 32
+UnScaledDefaultVertInterval 16
+UnScaledDefaultVertSignalHeight 10
+WavesVertScrollBarMax 100
+WavesVertScrollBarPosition 0
+WavesVertScrollBarEnabled 0
+Vars
+s%
+t0
+0 0 1 0
+s&
+t0
+0 0 1 0
+s'
+t0
+0 0 1 0
+s(
+t0
+0 0 1 0
+s)
+t0
+0 200 50 0
+100 200 50 1
+s*
+t0
+0 0 1 1
+100 0 1 0
+End
+Cursors
+100
+End
+ActiveCursorIndex 0
+versionCode
+20070511
+psrFileName
+D:\_analyze\week0501.psr
+systemCExportSimulationTime
+10000
+systemCExportSimulationTimeUnit
+10000
+systemCProbes
+End

@@ -1,0 +1,84 @@
+StimulianSaveFile
+LanguageType Verilog
+tbModuleName week0303fi_tb
+ModuleName week0303fi
+TimeUnit ns
+TotalTime 10000
+GridInterval 100
+Parameters
+End
+Port
+-1 ! 0 Binary A multibit in 3 0 Children % [3] & [2] ' [1] ( [0] ChildrenEnd PortEnd 0
+-1 ) 0 Binary B multibit in 3 0 Children - [3] . [2] / [1] 0 [0] ChildrenEnd PortEnd 0
+0 1 1 Binary Eq singlebit out 0 0 PortEnd 0
+0 2 1 Binary Gt singlebit out 0 0 PortEnd 0
+0 3 1 Binary Lt singlebit out 0 0 PortEnd 0
+End
+pixelTimeRatio 5
+HorzZoomOutScale 80
+WavesHorzScrollBarMax 98301
+WavesHorzScrollBarPosition 0
+WavesHorzScrollBarEnabled -1
+DefaultVertInterval 32
+UnScaledDefaultVertInterval 16
+UnScaledDefaultVertSignalHeight 10
+WavesVertScrollBarMax 100
+WavesVertScrollBarPosition 0
+WavesVertScrollBarEnabled 0
+Vars
+s%
+t0
+0 0 1 0
+6400 0 1 1
+s&
+t0
+0 6400 2 0
+3200 6400 2 1
+s'
+t0
+0 3200 4 0
+1600 3200 3 1
+s(
+t0
+0 1600 7 0
+800 1600 6 1
+s-
+t0
+0 800 13 0
+400 800 12 1
+s.
+t0
+0 400 25 0
+200 400 25 1
+s/
+t0
+0 200 50 0
+100 200 50 1
+s0
+t0
+0 100 100 0
+50 100 100 1
+s1
+t0
+0 0 1 0
+s2
+t0
+0 0 1 0
+s3
+t0
+0 0 1 0
+End
+Cursors
+1700
+End
+ActiveCursorIndex 0
+versionCode
+20070511
+psrFileName
+D:\FlowrianLee\_analyze\week0303fi.psr
+systemCExportSimulationTime
+10000
+systemCExportSimulationTimeUnit
+10000
+systemCProbes
+End

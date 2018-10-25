@@ -1,0 +1,125 @@
+if [ -f   /opt/Xilinx/14.1/ISE_DS/settings32.sh ]; then 
+ source /opt/Xilinx/14.1/ISE_DS/settings32.sh >> /tmp/log 
+fi
+if [ -f   /opt/Xilinx/14.1/ISE_DS/settings64.sh ]; then
+ source /opt/Xilinx/14.1/ISE_DS/settings64.sh >> /tmp/log
+fi
+ 
+echo PNULib= $FLOWRIANLIBRARY/PNULib/ISim/PNULib >> week0503_tb.init
+echo work=./work >> week0503_tb.init
+echo verilog work PNU_DFF_Ce.v >> week0503_tb.prj
+echo verilog work PNU_AND2.v >> week0503_tb.prj
+echo verilog work PNU_AND3.v >> week0503_tb.prj
+echo verilog work PNU_NOT.v >> week0503_tb.prj
+echo verilog work PNU_MUX4.v >> week0503_tb.prj
+echo verilog work week04fourth.v >> week0503_tb.prj
+echo verilog work PNU_OR4.v >> week0503_tb.prj
+echo verilog work PNU_OR2.v >> week0503_tb.prj
+echo verilog work PNU_OR8.v >> week0503_tb.prj
+echo verilog work PNU_TBUF.v >> week0503_tb.prj
+echo verilog work week0502.v >> week0503_tb.prj
+echo verilog work bit4shift3.v >> week0503_tb.prj
+echo verilog work week02te03.v >> week0503_tb.prj
+echo verilog work week0503.v >> week0503_tb.prj
+echo verilog work week0503_tb.v >> week0503_tb.prj
+echo vcd dumpfile week0503_tb.vcd >> week0503_tb.tcl
+echo vcd dumpvars -m /week0503_tb -l 1 >> week0503_tb.tcl
+echo run 10000 ns >> week0503_tb.tcl
+echo vcd dumpflush >> week0503_tb.tcl
+echo quit -f >> week0503_tb.tcl
+fuse -top work.week0503_tb -init week0503_tb.init -prj week0503_tb.prj  -lib PNULib -o week0503_tb.exe
+./week0503_tb.exe -tclbatch week0503_tb.tcl
+rm week0503_tb.tcl
+rm week0503_tb.init
+rm week0503_tb.prj
+rm fuse.xmsgs
+rm fuseRelaunch.cmd
+rm isim.wdb
+rm -f week0503_tb.exe fuse.log isim.log
+rm -rf isim
+rm list of verilog or VHDL files
+rm -rf ./work
+rm -rf bit4Adder.v
+rm -rf bit4shfit3.v
+rm -rf bit4shift3.v
+rm -rf bit5Register.v
+rm -rf count7.v
+rm -rf count7_tb.v
+rm -rf count10.v
+rm -rf CSweek04first.v
+rm -rf CSweek04first_tb.v
+rm -rf FullAdder.v
+rm -rf week02fi02.v
+rm -rf week02fi02_tb.v
+rm -rf week02re02.v
+rm -rf week02re02_tb.v
+rm -rf week02s02.v
+rm -rf week02s02_tb.v
+rm -rf week02te03.v
+rm -rf week02te03_tb.v
+rm -rf week03.v
+rm -rf week04fifth.v
+rm -rf week04fifth_tb.v
+rm -rf week04first.v
+rm -rf week04first_tb.v
+rm -rf week04first02.v
+rm -rf week04first02_tb.v
+rm -rf week04fourth.v
+rm -rf week04fourth_tb.v
+rm -rf week04second.v
+rm -rf week04second_tb.v
+rm -rf week04sixth.v
+rm -rf week04sixth_tb.v
+rm -rf week04third.v
+rm -rf week04third_tb.v
+rm -rf week0301.v
+rm -rf week0302.v
+rm -rf week0303.v
+rm -rf week0303fi.v
+rm -rf week0303fi_tb.v
+rm -rf week0501.v
+rm -rf week0501_tb.v
+rm -rf week0501fi.v
+rm -rf week0501fi_tb.v
+rm -rf week0502.v
+rm -rf week0502_tb.v
+rm -rf week030201.v
+rm -rf week030201_tb.v
+rm -rf week030303.v
+rm -rf PNU_AND2.v
+rm -rf PNU_AND3.v
+rm -rf PNU_AND4.v
+rm -rf PNU_AND8.v
+rm -rf PNU_BUF.v
+rm -rf PNU_DFF.v
+rm -rf PNU_DFF_Ce.v
+rm -rf PNU_JKFF.v
+rm -rf PNU_MUX2.v
+rm -rf PNU_MUX4.v
+rm -rf PNU_MUX8.v
+rm -rf PNU_NAND2.v
+rm -rf PNU_NAND3.v
+rm -rf PNU_NAND4.v
+rm -rf PNU_NAND8.v
+rm -rf PNU_NOR2.v
+rm -rf PNU_NOR3.v
+rm -rf PNU_NOR4.v
+rm -rf PNU_NOR8.v
+rm -rf PNU_NOT.v
+rm -rf PNU_ONE.v
+rm -rf PNU_OR2.v
+rm -rf PNU_OR3.v
+rm -rf PNU_OR4.v
+rm -rf PNU_OR8.v
+rm -rf PNU_SRAM.v
+rm -rf PNU_TBUF.v
+rm -rf PNU_XNOR2.v
+rm -rf PNU_XNOR3.v
+rm -rf PNU_XNOR4.v
+rm -rf PNU_XOR2.v
+rm -rf PNU_XOR3.v
+rm -rf PNU_XOR4.v
+rm -rf PNU_ZERO.v
+rm -rf week0503.v
+rm -rf week0503_tb.v
+echo Finish simulation!!

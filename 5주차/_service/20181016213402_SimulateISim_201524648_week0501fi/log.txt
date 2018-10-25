@@ -1,0 +1,138 @@
+script> if [ -f   /opt/Xilinx/14.1/ISE_DS/settings32.sh ]; then 
+script>  source /opt/Xilinx/14.1/ISE_DS/settings32.sh >> /tmp/log 
+script> fi
+script> if [ -f   /opt/Xilinx/14.1/ISE_DS/settings64.sh ]; then
+script>  source /opt/Xilinx/14.1/ISE_DS/settings64.sh >> /tmp/log
+script> fi
+script>  
+script> echo PNULib= $FLOWRIANLIBRARY/PNULib/ISim/PNULib >> week0501fi.init
+script> echo work=./work >> week0501fi.init
+script> echo verilog work PNU_OR2.v >> week0501fi.prj
+script> echo verilog work PNU_AND3.v >> week0501fi.prj
+script> echo verilog work PNU_AND2.v >> week0501fi.prj
+script> echo verilog work PNU_NOT.v >> week0501fi.prj
+script> echo verilog work PNU_DFF.v >> week0501fi.prj
+script> echo verilog work PNU_AND4.v >> week0501fi.prj
+script> echo verilog work count7.v >> week0501fi.prj
+script> echo verilog work week0501fi.v >> week0501fi.prj
+script> echo vcd dumpfile week0501fi.vcd >> week0501fi.tcl
+script> echo vcd dumpvars -m /week0501fi -l 1 >> week0501fi.tcl
+script> echo run 10000 ns >> week0501fi.tcl
+script> echo vcd dumpflush >> week0501fi.tcl
+INFO:Simulator:908 - Using init file passed via -initfile option
+   "week0501fi.init"
+Running: /opt/Xilinx/14.1/ISE_DS/ISE/bin/lin/unwrapped/fuse -top work.week0501fi -init week0501fi.init -prj week0501fi.prj -lib PNULib -o week0501fi.exe
+ISim P.15xf (signature 0x8ddf5b5d)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8
+Determining compilation order of HDL files
+Analyzing Verilog file "PNU_OR2.v" into library work
+Analyzing Verilog file "PNU_AND3.v" into library work
+Analyzing Verilog file "PNU_AND2.v" into library work
+Analyzing Verilog file "PNU_NOT.v" into library work
+Analyzing Verilog file "PNU_DFF.v" into library work
+Analyzing Verilog file "PNU_AND4.v" into library work
+Analyzing Verilog file "count7.v" into library work
+Analyzing Verilog file "week0501fi.v" into library work
+Starting static elaboration
+WARNING:HDLCompiler:267 - "week0501fi.v" Line 35: Cannot find port CNT10 on this module
+ERROR:HDLCompiler:25 - "week0501fi.v" Line 37: Module <count7> does not have a port named <Clk>.
+ERROR:HDLCompiler:25 - "week0501fi.v" Line 39: Module <count7> does not have a port named <CNT10>.
+WARNING:HDLCompiler:1016 - "week0501fi.v" Line 35: Port clk is not connected to this instance
+ERROR:Simulator:778 - Static elaboration of top level Verilog design unit(s) in library work failed
+script> echo quit -f >> week0501fi.tcl
+flowrian_net_script.sh: line 48: ./week0501fi.exe: No such file or directory
+script> fuse -top work.week0501fi -init week0501fi.init -prj week0501fi.prj  -lib PNULib -o week0501fi.exe
+script> ./week0501fi.exe -tclbatch week0501fi.tcl
+script> rm week0501fi.tcl
+script> rm week0501fi.init
+script> rm week0501fi.prj
+script> rm fuse.xmsgs
+rm: cannot remove `isim.wdb': No such file or directory
+script> rm fuseRelaunch.cmd
+script> rm isim.wdb
+script> rm -f week0501fi.exe fuse.log isim.log
+rm: cannot remove `list': No such file or directory
+rm: cannot remove `of': No such file or directory
+rm: cannot remove `verilog': No such file or directory
+rm: cannot remove `or': No such file or directory
+rm: cannot remove `VHDL': No such file or directory
+rm: cannot remove `files': No such file or directory
+script> rm -rf isim
+script> rm list of verilog or VHDL files
+script> rm -rf ./work
+script> rm -rf bit4Adder.v
+script> rm -rf bit5Register.v
+script> rm -rf CSweek04first.v
+script> rm -rf CSweek04first_tb.v
+script> rm -rf FullAdder.v
+script> rm -rf week02fi02.v
+script> rm -rf week02fi02_tb.v
+script> rm -rf week02re02.v
+script> rm -rf week02re02_tb.v
+script> rm -rf week02s02.v
+script> rm -rf week02s02_tb.v
+script> rm -rf week02te03.v
+script> rm -rf week02te03_tb.v
+script> rm -rf week03.v
+script> rm -rf week04fifth.v
+script> rm -rf week04fifth_tb.v
+script> rm -rf week04first.v
+script> rm -rf week04first_tb.v
+script> rm -rf week04first02.v
+script> rm -rf week04first02_tb.v
+script> rm -rf week04fourth.v
+script> rm -rf week04fourth_tb.v
+script> rm -rf week04second.v
+script> rm -rf week04second_tb.v
+script> rm -rf week04sixth.v
+script> rm -rf week04sixth_tb.v
+script> rm -rf week04third.v
+script> rm -rf week04third_tb.v
+script> rm -rf week0301.v
+script> rm -rf week0302.v
+script> rm -rf week0303.v
+script> rm -rf week0303fi.v
+script> rm -rf week0303fi_tb.v
+script> rm -rf week030201.v
+script> rm -rf week030201_tb.v
+script> rm -rf week030303.v
+script> rm -rf PNU_AND2.v
+script> rm -rf PNU_AND3.v
+script> rm -rf PNU_AND4.v
+script> rm -rf PNU_AND8.v
+script> rm -rf PNU_BUF.v
+script> rm -rf PNU_DFF.v
+script> rm -rf PNU_DFF_Ce.v
+script> rm -rf PNU_JKFF.v
+script> rm -rf PNU_MUX2.v
+script> rm -rf PNU_MUX4.v
+script> rm -rf PNU_MUX8.v
+script> rm -rf PNU_NAND2.v
+script> rm -rf PNU_NAND3.v
+script> rm -rf PNU_NAND4.v
+script> rm -rf PNU_NAND8.v
+script> rm -rf PNU_NOR2.v
+script> rm -rf PNU_NOR3.v
+script> rm -rf PNU_NOR4.v
+script> rm -rf PNU_NOR8.v
+script> rm -rf PNU_NOT.v
+script> rm -rf PNU_ONE.v
+script> rm -rf PNU_OR2.v
+script> rm -rf PNU_OR3.v
+script> rm -rf PNU_OR4.v
+script> rm -rf PNU_OR8.v
+script> rm -rf PNU_SRAM.v
+script> rm -rf PNU_TBUF.v
+script> rm -rf PNU_XNOR2.v
+script> rm -rf PNU_XNOR3.v
+script> rm -rf PNU_XNOR4.v
+script> rm -rf PNU_XOR2.v
+script> rm -rf PNU_XOR3.v
+script> rm -rf PNU_XOR4.v
+script> rm -rf PNU_ZERO.v
+script> rm -rf week0501.v
+script> rm -rf week0501_tb.v
+script> rm -rf count7.v
+script> rm -rf count7_tb.v
+Finish simulation!!
